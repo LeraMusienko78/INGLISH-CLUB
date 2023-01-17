@@ -1,5 +1,7 @@
 @import "./variables.scss";
 @import "./mixin.scss";
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
 
 
 
@@ -20,11 +22,64 @@ li {
 
 header{
     display: flex;
-    justify-content: space-between;
+    width: 1295px;
     background: palevioletred;
+    @include flexbox (space-between , center , 30px, 100%);
 
-    .title-text{
-        @include font;
+    .logo-wrapper{
+       width: 40%;
+       display: flex;
+      
+       .logo{
+        border-radius: $border-radius;
+        @include size (120px, 120px);
+       }
+
+    }
+    .title{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+
+        .title-text{
+            @include font ;
+        }
+    }
+
+    .input-wrapper{
+
+        width: 40%;
+
+        display: flex;
+        justify-content: start;
+
+        .input{
+            @include size (200px, 50px);
+            padding: 10px;
+            border: none;
+            background: inherit;
+            border-bottom: 1px solid $third-bg-color;
+            font-size: 25px;
+            color:#232323;
+        }
+    }
+
+    .nav{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+
+        &-link{
+            font-size: $secondari-font-size-m;
+            font-family: $secondari-font-family;
+            color: $secondari-text-color;
+        }
+
+        &-link:hover{
+            border-bottom:2px solid $secondari-text-color;
+            // transition: 1700ms;
+        }
     }
 }
 

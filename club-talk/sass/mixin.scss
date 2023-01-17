@@ -1,5 +1,30 @@
+// @mixin flexbox ($justifyContent , $alignItems , $width) {
+//     display: flex ;
+//     justify-content: $justifyContent ;
+//     align-items: $alignItems ;
+//     width: $width or 100% ;
+// }
+
+// @mixin rotate ($deg) {
+//     transform: rotate($deg);
+// }
+
+
 @mixin  font  {
-    font-size: 30px;
+    font-size: 50px;
     font-weight: bolt;
     color: $third-bg-color;
+}
+
+@mixin flexbox ($justifyContent,$alignItems , $pad ,$width) {
+   display: flex;
+   justify-content: $justifyContent;
+   align-items: $alignItems;
+   width: $width or 100%;
+   padding: $pad;
+}
+
+@mixin size ($width ,$height) {
+    width: $width;
+    height: $height;
 }
