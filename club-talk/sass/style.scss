@@ -27,12 +27,13 @@ header{
     @include flexbox (space-between , center , 30px, 100%);
 
     .logo-wrapper{
-       width: 40%;
+       width: 30%;
        display: flex;
+       justify-content: space-between;
       
        .logo{
         border-radius: $border-radius;
-        @include size (120px, 120px);
+        @include size (150px, 150px);
        }
 
     }
@@ -50,9 +51,10 @@ header{
     .input-wrapper{
 
         width: 40%;
-
         display: flex;
-        justify-content: start;
+        justify-content: center;
+        // color: aliceblue;
+
 
         .input{
             @include size (200px, 50px);
@@ -61,7 +63,7 @@ header{
             background: inherit;
             border-bottom: 1px solid $third-bg-color;
             font-size: 25px;
-            color:#232323;
+            color: white;
         }
     }
 
@@ -72,6 +74,7 @@ header{
 
         &-link{
             font-size: $secondari-font-size-m;
+            // font-family: $secondari-font-family;
             font-family: $secondari-font-family;
             color: $secondari-text-color;
         }
@@ -79,6 +82,42 @@ header{
         &-link:hover{
             border-bottom:2px solid $secondari-text-color;
             // transition: 1700ms;
+        }
+    }
+}
+
+.conteiner{
+    display: flex;
+    justify-content: space-between;
+
+    .saidebar{
+        display: flex;
+        width: 20%;
+        height: 100vh;
+        justify-content: center;
+        // background: red;
+
+        .filter-wrapper{
+            display: flex;
+            flex-direction:column ;
+            padding: 30px;
+
+            .filter-title{
+                padding: 30px;
+                font-size:$primari-font-size-l ;
+            }
+
+            .input-wrapper{
+                display: flex;
+                justify-content: space-between;
+                padding: 30px;
+                font-size: $secondari-font-size-m;
+                color: blue;
+
+                .input{
+                    @include size (20px, 20px);
+                }
+            }
         }
     }
 }
